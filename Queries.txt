@@ -1,0 +1,208 @@
+/users/
+/ Created users collection /
+
+use students
+db.createCollection("users");
+db.users.insertMany([{
+     userid: 1,
+      name: "Aravind",
+      email: "aravi@gmail.com",
+      mentorid: 1,
+},
+{
+     userid: 2,
+      name: "Santosh",
+      email: "sant@gmail.com",
+      mentorid: 2,
+},
+{
+     userid: 3,
+      name: "Raj",
+      email: "raj@gmail.com",
+      mentorid: 3,
+},
+{
+     userid: 3,
+      name: "Raj",
+      email: "raj@gmail.com",
+      mentorid: 3,
+},
+{
+userid: 4,
+      name: "Krishna",
+      email: "kna@gmail.com",
+      mentorid: 4,
+},{
+userid: 5,
+      name: "Priyanka",
+      email: "pk@gmail.com",
+      mentorid: 5,
+
+}]);
+
+/codekata/
+
+/ Created codekata /
+
+db.codekata.insertMany([{
+userid: 1,
+Numberofproblemssolved: 50,
+},
+{
+userid: 2,
+Numberofproblemssolved: 40,
+},
+
+{
+userid: 4,
+Numberofproblemssolved: 20,
+},{
+userid: 5,
+Numberofproblemssolved: 10,
+
+}]);
+
+/attendance/
+
+db.attendance.insertMany([
+    {
+      userid: 1,
+      topicid: 1,
+      attended: true,
+    },
+    {
+      userid: 2,
+      topicid: 2,
+      attended: true,
+    },
+   
+    {
+      userid: 4,
+      topicid: 4,
+      attended: false,
+    },
+    {
+      userid: 5,
+      topicid: 5,
+      attended: false,
+    },
+  ]);
+  
+  / topics /
+  
+   db.topics.insertMany([
+    {
+      topicid: 1,
+      topic: "MongoDB",
+      topic_date: new Date("15-oct-2020"),
+    },
+    {
+      topicid: 2,
+      topic: "css",
+      topic_date: new Date("10-nov-2021"),
+    },
+    
+    {
+      topicid: 4,
+      topic: "React",
+      topic_date: new Date("20-nov-2021"),
+    },
+    {
+      topicid: 5,
+      topic: "NodeJs",
+      topic_date: new Date("25-nov-2021"),
+    },
+  ]);
+  
+  / tasks /
+  
+   db.tasks.insertMany([
+    {
+      taskid: 1,
+      topicid: 1,
+      userid: 1,
+      task: "MongoDB task",
+      due_date: new Date("15-oct-2020"),
+      submitted: true,
+    },
+    {
+      taskid: 2,
+      topicid: 2,
+      userid: 2,
+      task: "css task",
+      due_date: new Date("10-nov-2021"),
+      submitted: true,
+    },
+   
+    {
+      taskid: 4,
+      topicid: 4,
+      userid: 4,
+      task: "React task",
+      due_date: new Date("20-nov-2021"),
+      submitted: false,
+    },
+    {
+      taskid: 5,
+      topicid: 5,
+      userid: 5,
+      task: "Node task",
+      due_date: new Date("25-nov-2021"),
+      submitted: false,
+    },
+  ]);
+  
+  / company_drives /
+  db.comapnydrives.insertMany([
+    {
+      userid: 1,
+      drive_date: new Date("16-nov-2020"),
+      company: "Capgemini",
+    },
+    
+    {
+      userid: 2,
+      drive_date: new Date("20-nov-2021"),
+      company: "Accenture",
+    },
+    {
+      userid: 4,
+      drive_date: new Date("25-nov-2021"),
+      company: "Cignizant",
+    },
+    {
+      userid: 5,
+      drive_date: new Date("27-nov-2021"),
+      company: "Amazon",
+    },
+  ]);
+  
+  / mentors /
+  
+   db.mentors.insertMany([
+    {
+      mentorid: 1,
+      mentorname: "anj",
+      mentees: 16,
+      mentor_email: "anj@gmail.com",
+    },
+    {
+      mentorid: 2,
+      mentees: 20,
+      mentorname: "sriv",
+      mentor_email: "sriv@gmail.com",
+    },
+    
+    {
+      mentorid: 4,
+      mentees: 10,
+      mentorname: "ara",
+      mentor_email: "ara@gmail.com",
+    },
+    {
+      mentorid: 5,
+      mentees: 13,
+      mentorname: "amm",
+      mentor_email: "amm@gmail.com",
+    },
+  ]);
